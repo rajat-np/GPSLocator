@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import MapView from 'react-native-maps';
 import image from './images/flag-pink.png';
+import getLocation from './Services.js';
 
 export default class App extends PureComponent {  
   constructor(props){
@@ -18,15 +19,16 @@ export default class App extends PureComponent {
       }
     }
   }
-
-  async function getLocation = () => {
+getLocation = async () => {
   	let latsRequest = await getIndividualField('lats');
+    console.log('Lats requested');
   	let longsRequest = await getIndividualField('longs');
-	let latsBody = latsRequest._bodyText.toString().split('"');
-  	let longsBody = = longsRequest._bodyText.toString().split('"');
-  	let lats = latsBody[latsBody.indexOf('field1')+2];
-  	let longs = longsBody[longsBody.indexOf('field2'+2)];
-  	console.log(lats, longs)
+    console.log('Longs requested');
+    let latsBody = latsRequest._bodyText.toString().split('"');
+  	let longsBody = longsRequest._bodyText.toString().split('"');
+  	let lats = Number(latsBody[latsBody.indexOf('field1')+2])/1000000;
+  	let longs = Number(longsBody[longsBody.indexOf('field2')+2])/1000000;
+  	console.log(lats,longs)
   	this.setState({
           coordinates :{
             longitude: Number(longs),
@@ -35,7 +37,7 @@ export default class App extends PureComponent {
     })
 
 }
-  getIndividualField = (field) => {
+getIndividualField = (field) => {
   	if (field === 'lats'){
   		return fetch('https://thingspeak.com/channels/407273/field/1/last.json');
   	}
@@ -43,7 +45,6 @@ export default class App extends PureComponent {
   		return fetch('https://thingspeak.com/channels/407273/field/2/last.json');
   	}
 }
-
   render() {
     return (
         <View>
