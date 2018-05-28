@@ -10,6 +10,8 @@ react-native link
 react-native run-ios
 
 ```
+#Download link 
+[Download](https://drive.google.com/open?id=1FruH17P-1atICjAxrW3nS1kp7iPlGyqn)
 
 # ScreenShots
 
