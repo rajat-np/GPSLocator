@@ -8,5 +8,11 @@ npm i -S react-native@0.49 #at the moment of creation there was a bug React Nati
 npm i
 react-native link
 react-native run-ios
+
 ```
 
+# ScreenShots
+
+![Alt text](Screenshots/Screenshot_2018-05-28-12-30-29-504_com.gpslocator.png?raw=true "")
+
+![Alt text](Screenshots/Screenshot_2018-05-28-12-30-36-704_com.gpslocator.png?raw=true "")
