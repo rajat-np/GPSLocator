@@ -15,4 +15,6 @@ react-native run-ios
 
 ![Alt text](Screenshots/Screenshot_2018-05-28-12-30-29-504_com.gpslocator.png?raw=true "")
 
+# After Update button clicked
+
 ![Alt text](Screenshots/Screenshot_2018-05-28-12-30-36-704_com.gpslocator.png?raw=true "")
