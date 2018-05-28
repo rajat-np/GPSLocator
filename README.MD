@@ -11,7 +11,7 @@ react-native run-ios
 
 ```
 [Download](https://drive.google.com/open?id=1FruH17P-1atICjAxrW3nS1kp7iPlGyqn)
-
+There is a bug in react-native-map component which makes this app unable to run in android > 6. 
 # ScreenShots
 
 ![Alt text](Screenshots/Screenshot_2018-05-28-12-30-29-504_com.gpslocator.png?raw=true "")
